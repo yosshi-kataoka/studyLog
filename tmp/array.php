@@ -1,7 +1,11 @@
 <?php
 
-$comics = ['火の鳥', 'ガラスの仮面'];
-var_export($comics) . PHP_EOL;
+$user = [
+  'name' => 'kume',
+  'sex' => 'male',
+];
 
-$comics[] = 'BananaFish';
-var_dump($comics);
+$user['age'] = 20;
+
+var_export($user);
+echo $user['name'] . PHP_EOL;
