@@ -24,6 +24,19 @@ function createBookLog()
   ];
 }
 
+function displayBookLog($bookLogs)
+{
+  echo '読書ログを表示します' . PHP_EOL;
+  foreach ($bookLogs as $bookLog) {
+    echo '書籍名:' . $bookLog['title'] . PHP_EOL;
+    echo '著者名:' . $bookLog['author'] . PHP_EOL;
+    echo '読書状況:' . $bookLog['status'] . PHP_EOL;
+    echo '評価:' . $bookLog['evaluation'] . PHP_EOL;
+    echo '感想:' . $bookLog['review'] . PHP_EOL;
+    echo '-------------' . PHP_EOL;
+  }
+}
+
 $bookLogs = [];
 
 while (true) {
@@ -37,16 +50,9 @@ while (true) {
     // 読書ログを登録する
     $bookLogs[] = createBookLog();
   } elseif ($num === '2') {
+    displayBookLog($bookLogs);
     // 読書ログを表示する
-    echo '読書ログを表示します' . PHP_EOL;
-    foreach ($bookLogs as $bookLog) {
-      echo '書籍名:' . $bookLog['title'] . PHP_EOL;
-      echo '著者名:' . $bookLog['author'] . PHP_EOL;
-      echo '読書状況:' . $bookLog['status'] . PHP_EOL;
-      echo '評価:' . $bookLog['evaluation'] . PHP_EOL;
-      echo '感想:' . $bookLog['review'] . PHP_EOL;
-      echo '-------------' . PHP_EOL;
-    }
+
     // echo '書籍名:' . $title . PHP_EOL;
     // echo '著者名:' . $author . PHP_EOL;
     // echo '読書状況:' . $status . PHP_EOL;
