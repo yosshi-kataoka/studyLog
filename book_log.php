@@ -1,12 +1,30 @@
 <?php
+
+function createBookLog()
+{
+  echo '読書ログを登録してください:' . PHP_EOL;
+  echo '書籍名:';
+  $title =  trim(fgets(STDIN));
+  echo '著者名:';
+  $author =  trim(fgets(STDIN));
+  echo '読書状況(未読,読んでる,読了):';
+  $status =  trim(fgets(STDIN));
+  echo '評価:';
+  $evaluation =  trim(fgets(STDIN));
+  echo '感想:';
+  $review =  trim(fgets(STDIN));
+
+  echo '登録が完了しました' . PHP_EOL . PHP_EOL;
+  return [
+    'title' => $title,
+    'author' => $author,
+    'status' => $status,
+    'evaluation' => $evaluation,
+    'review' => $review,
+  ];
+}
+
 $bookLogs = [];
-$books = [
-  'title' => '',
-  'author' => '',
-  'status' => '',
-  'evaluation' => '',
-  'review' => '',
-];
 
 while (true) {
   echo '1.読書ログの登録' . PHP_EOL;
@@ -17,19 +35,7 @@ while (true) {
   $num = trim(fgets(STDIN));
   if ($num === '1') {
     // 読書ログを登録する
-    echo '読書ログを登録してください:' . PHP_EOL;
-    echo '書籍名:';
-    $books['title'] =  trim(fgets(STDIN));
-    echo '著者名:';
-    $books['author'] =  trim(fgets(STDIN));
-    echo '読書状況(未読,読んでる,読了):';
-    $books['status'] =  trim(fgets(STDIN));
-    echo '評価:';
-    $books['evaluation'] =  trim(fgets(STDIN));
-    echo '感想:';
-    $books['review'] =  trim(fgets(STDIN));
-    $bookLogs[] = $books;
-    echo '登録が完了しました' . PHP_EOL . PHP_EOL;
+    $bookLogs[] = createBookLog();
   } elseif ($num === '2') {
     // 読書ログを表示する
     echo '読書ログを表示します' . PHP_EOL;
