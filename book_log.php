@@ -38,7 +38,8 @@ while (true) {
       echo '著者名:' . $bookLog['author'] . PHP_EOL;
       echo '読書状況:' . $bookLog['status'] . PHP_EOL;
       echo '評価:' . $bookLog['evaluation'] . PHP_EOL;
-      echo '感想:' . $bookLog['review'] . PHP_EOL . PHP_EOL;
+      echo '感想:' . $bookLog['review'] . PHP_EOL;
+      echo '-------------' . PHP_EOL;
     }
     // echo '書籍名:' . $title . PHP_EOL;
     // echo '著者名:' . $author . PHP_EOL;
