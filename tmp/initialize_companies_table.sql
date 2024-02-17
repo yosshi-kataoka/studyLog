@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS companies;
+
 create table companies (
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255),
