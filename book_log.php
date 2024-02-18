@@ -1,5 +1,17 @@
 <?php
 
+function dbConnect()
+{
+  $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
+  if (!$link) {
+    echo 'データベースの接続に失敗しました' . PHP_EOL;
+    echo 'Debugging error:' . mysqli_connect_error() . PHP_EOL;
+    exit;
+  }
+  echo 'データベースの接続に成功しました' . PHP_EOL;
+  return $link;
+}
+
 function createBookLog()
 {
   echo '読書ログを登録してください:' . PHP_EOL;
@@ -38,13 +50,7 @@ function displayBookLog($bookLogs)
 }
 
 $bookLogs = [];
-$link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
-if (!$link) {
-  echo 'データベースの接続に失敗しました' . PHP_EOL;
-  echo 'Debugging error:' . mysqli_connect_error() . PHP_EOL;
-  exit;
-}
-echo 'データベースの接続に成功しました' . PHP_EOL;
+$link = dbConnect();
 
 while (true) {
   echo '1.読書ログの登録' . PHP_EOL;
