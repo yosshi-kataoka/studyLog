@@ -38,6 +38,13 @@ function displayBookLog($bookLogs)
 }
 
 $bookLogs = [];
+$link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
+if (!$link) {
+  echo 'データベースの接続に失敗しました' . PHP_EOL;
+  echo 'Debugging error:' . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+echo 'データベースの接続に成功しました' . PHP_EOL;
 
 while (true) {
   echo '1.読書ログの登録' . PHP_EOL;
@@ -60,6 +67,8 @@ while (true) {
     // echo '感想:' . $review . PHP_EOL;
   } elseif ($num === '9') {
     //  アプリケーションを終了する
+    mysqli_close($link);
+    echo 'データベースとの接続を解除しました' . PHP_EOL;
     break;
   }
 }
