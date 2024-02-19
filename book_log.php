@@ -1,5 +1,27 @@
 <?php
 
+function validate($review)
+{
+  $errors = [];
+  // 書籍名のバリデーション
+  if (!mb_strlen($review['title'])) {
+    $errors['title'] = "書籍名を入力してください" . PHP_EOL;
+  } elseif (mb_strlen($review['title']) > 255) {
+    $errors['title'] = "書籍名は255文字以下で入力してください" . PHP_EOL;
+  }
+  // 評価のバリデーション
+  if (!mb_strlen($review['evaluation'])) {
+    $errors['evaluation'] = "評価が空白です。評価を1以上5以下の整数にて入力してください" . PHP_EOL;
+  } elseif (
+    (int)$review['evaluation'] < 1 || (int)$review['evaluation'] > 5
+  ) {
+    $errors['evaluation'] = "評価を1以上5以下の整数にて入力してください" . PHP_EOL;
+  } elseif (!filter_var($review['evaluation'], FILTER_VALIDATE_INT)) {
+    $errors['evaluation'] = "小数点が入力されてます。評価を1以上5以下の整数にて入力してください" . PHP_EOL;
+  }
+  return $errors;
+}
+
 function dbConnect()
 {
   $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
@@ -14,17 +36,27 @@ function dbConnect()
 
 function createBookLog($link)
 {
+  $review = [];
   echo '読書ログを登録してください:' . PHP_EOL;
   echo '書籍名:';
-  $title =  trim(fgets(STDIN));
+  $review['title'] = trim(fgets(STDIN));
   echo '著者名:';
-  $author =  trim(fgets(STDIN));
+  $review['author'] = trim(fgets(STDIN));
   echo '読書状況(未読,読んでる,読了):';
-  $status =  trim(fgets(STDIN));
+  $review['status'] = trim(fgets(STDIN));
   echo '評価:';
-  $evaluation =  trim(fgets(STDIN));
+  $review['evaluation'] = trim(fgets(STDIN));
   echo '感想:';
-  $review =  trim(fgets(STDIN));
+  $review['review'] = trim(fgets(STDIN));
+
+  //入力した内容のバリデーション処理
+  $validated = validate($review);
+  if (count($validated) > 0) {
+    foreach ($validated as $error) {
+      echo $error . PHP_EOL;
+    }
+    return;
+  }
 
   $sql = <<<EOT
   INSERT INTO book_log(
@@ -34,11 +66,11 @@ function createBookLog($link)
   evaluation,
   review
   ) VALUES(
-  "{$title}",
-  "{$author}",
-  "{$status}",
-  $evaluation,
-  "{$review}"
+  "{$review['title']}",
+  "{$review['author']}",
+  "{$review['status']}",
+  "{$review['evaluation']}",
+  "{$review['review']}"
   )
   EOT;
   $result = mysqli_query($link, $sql);
