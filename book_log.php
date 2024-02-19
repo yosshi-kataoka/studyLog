@@ -12,7 +12,7 @@ function dbConnect()
   return $link;
 }
 
-function createBookLog()
+function createBookLog($link)
 {
   echo '読書ログを登録してください:' . PHP_EOL;
   echo '書籍名:';
@@ -26,14 +26,28 @@ function createBookLog()
   echo '感想:';
   $review =  trim(fgets(STDIN));
 
-  echo '登録が完了しました' . PHP_EOL . PHP_EOL;
-  return [
-    'title' => $title,
-    'author' => $author,
-    'status' => $status,
-    'evaluation' => $evaluation,
-    'review' => $review,
-  ];
+  $sql = <<<EOT
+  INSERT INTO book_log(
+  title,
+  author,
+  status,
+  evaluation,
+  review
+  ) VALUES(
+  "{$title}",
+  "{$author}",
+  "{$status}",
+  $evaluation,
+  "{$review}"
+  )
+  EOT;
+  $result = mysqli_query($link, $sql);
+  if ($result) {
+    echo '登録が完了しました' . PHP_EOL . PHP_EOL;
+  } else {
+    echo '登録に失敗しました' . PHP_EOL;
+    echo 'Debugging Error:' . mysqli_error($link) . PHP_EOL;
+  }
 }
 
 function displayBookLog($bookLogs)
@@ -61,7 +75,7 @@ while (true) {
   $num = trim(fgets(STDIN));
   if ($num === '1') {
     // 読書ログを登録する
-    $bookLogs[] = createBookLog();
+    createBookLog($link);
   } elseif ($num === '2') {
     displayBookLog($bookLogs);
     // 読書ログを表示する
