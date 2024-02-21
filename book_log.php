@@ -3,21 +3,34 @@
 function validate($review)
 {
   $errors = [];
+  $statusArray = ["未読", "読んでる", "読了"];
   // 書籍名のバリデーション
   if (!mb_strlen($review['title'])) {
-    $errors['title'] = "書籍名を入力してください" . PHP_EOL;
+    $errors['title'] = "書籍名を入力してください";
   } elseif (mb_strlen($review['title']) > 255) {
-    $errors['title'] = "書籍名は255文字以下で入力してください" . PHP_EOL;
+    $errors['title'] = "書籍名は255文字以下で入力してください";
+  }
+  // 著者名のバリデーション
+  if (!mb_strlen($review['author'])) {
+    $errors['author'] = "著者名を入力してください";
+  } elseif (mb_strlen($review['author'] > 255)) {
+    $errors['author'] = "著者名は255文字以下で入力してください";
+  }
+  // 読書状況のバリデーション
+  if (!in_array($review['status'], $statusArray, true)) {
+    $errors['status'] = "読書状況は、「未読」、「読んでる」,「読了」,のいずれかを入力してください";
   }
   // 評価のバリデーション
-  if (!mb_strlen($review['evaluation'])) {
-    $errors['evaluation'] = "評価が空白です。評価を1以上5以下の整数にて入力してください" . PHP_EOL;
-  } elseif (
-    (int)$review['evaluation'] < 1 || (int)$review['evaluation'] > 5
-  ) {
-    $errors['evaluation'] = "評価を1以上5以下の整数にて入力してください" . PHP_EOL;
+  if ((int)$review['evaluation'] < 1 || (int)$review['evaluation'] > 5) {
+    $errors['evaluation'] = "評価を1以上5以下の整数にて入力してください";
   } elseif (!filter_var($review['evaluation'], FILTER_VALIDATE_INT)) {
-    $errors['evaluation'] = "小数点が入力されてます。評価を1以上5以下の整数にて入力してください" . PHP_EOL;
+    $errors['evaluation'] = "小数点が入力されてます。評価を1以上5以下の整数にて入力してください";
+  }
+  // 感想のバリデーション
+  if (!mb_strlen($review['review'])) {
+    $errors['review'] = "感想を入力してください";
+  } elseif (mb_strlen($review['review']) > 2000) {
+    $errors['review'] = "感想は2000文字以内で入力してください";
   }
   return $errors;
 }
@@ -52,6 +65,8 @@ function createBookLog($link)
   //入力した内容のバリデーション処理
   $validated = validate($review);
   if (count($validated) > 0) {
+    echo "エラー内容を表示します"  . PHP_EOL;
+    echo "----------------" . PHP_EOL;
     foreach ($validated as $error) {
       echo $error . PHP_EOL;
     }
