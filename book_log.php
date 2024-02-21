@@ -34,7 +34,7 @@ function validate($review)
   }
   return $errors;
 }
-
+// データベースとの接続
 function dbConnect()
 {
   $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
@@ -43,10 +43,10 @@ function dbConnect()
     echo 'Debugging error:' . mysqli_connect_error() . PHP_EOL;
     exit;
   }
-  echo 'データベースの接続に成功しました' . PHP_EOL;
   return $link;
 }
 
+// 読書ログの登録
 function createBookLog($link)
 {
   $review = [];
@@ -72,7 +72,6 @@ function createBookLog($link)
     }
     return;
   }
-
   $sql = <<<EOT
   INSERT INTO book_log(
   title,
@@ -97,10 +96,13 @@ function createBookLog($link)
   }
 }
 
-function displayBookLog($bookLogs)
+// 読書ログの一覧を表示
+function displayBookLog($link)
 {
   echo '読書ログを表示します' . PHP_EOL;
-  foreach ($bookLogs as $bookLog) {
+  $sql = 'SELECT title, author, status, evaluation, review FROM  book_log';
+  $results = mysqli_query($link, $sql);
+  while ($bookLog = mysqli_fetch_assoc($results)) {
     echo '書籍名:' . $bookLog['title'] . PHP_EOL;
     echo '著者名:' . $bookLog['author'] . PHP_EOL;
     echo '読書状況:' . $bookLog['status'] . PHP_EOL;
@@ -108,41 +110,27 @@ function displayBookLog($bookLogs)
     echo '感想:' . $bookLog['review'] . PHP_EOL;
     echo '-------------' . PHP_EOL;
   }
+  mysqli_free_result($results);
 }
 
-$bookLogs = [];
+// メインルーチン
 $link = dbConnect();
 
 while (true) {
   echo '1.読書ログの登録' . PHP_EOL;
   echo '2.読書ログの表示' . PHP_EOL;
   echo '9.アプリケーションを終了' . PHP_EOL;
-
   echo '番号を選択してください(1,2,9)' . PHP_EOL;
   $num = trim(fgets(STDIN));
   if ($num === '1') {
-    // 読書ログを登録する
+    // 読書ログの登録処理
     createBookLog($link);
   } elseif ($num === '2') {
-    displayBookLog($bookLogs);
-    // 読書ログを表示する
-
-    // echo '書籍名:' . $title . PHP_EOL;
-    // echo '著者名:' . $author . PHP_EOL;
-    // echo '読書状況:' . $status . PHP_EOL;
-    // echo '評価:' . $evaluation . PHP_EOL;
-    // echo '感想:' . $review . PHP_EOL;
+    // 読書ログの表示処理
+    displayBookLog($link);
   } elseif ($num === '9') {
     //  アプリケーションを終了する
     mysqli_close($link);
-    echo 'データベースとの接続を解除しました' . PHP_EOL;
     break;
   }
 }
-
-
-// echo '書籍名:銀河鉄道の夜' . PHP_EOL;
-// echo '著者名:宮沢賢治' . PHP_EOL;
-// echo '読書状況:読了' . PHP_EOL;
-// echo '評価:5' . PHP_EOL;
-// echo '感想:ほんとうの幸せとは何だろうかと考えさせられる作品だった' . PHP_EOL;
