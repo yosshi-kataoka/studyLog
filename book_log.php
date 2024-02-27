@@ -130,7 +130,11 @@ while (true) {
     displayBookLog($link);
   } elseif ($num === '9') {
     //  アプリケーションを終了する
+    echo '終了します.' . PHP_EOL;
     mysqli_close($link);
     break;
+  } else {
+    echo '1,2,9いずれかの番号を選択してください。' . PHP_EOL;
+    continue;
   }
 }
