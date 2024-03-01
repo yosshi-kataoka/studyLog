@@ -16,6 +16,6 @@ function excelColumnNames()
 }
 
 // メインルーチン
-foreach (excelCOlumnNames() as $excelColumnName) {
+foreach (excelColumnNames() as $excelColumnName) {
   echo $excelColumnName . PHP_EOL;
 }
