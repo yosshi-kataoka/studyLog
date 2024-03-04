@@ -1,34 +1,29 @@
 <?php
 
 declare(strict_types=1);
-require_once dirname(__FILE__) . '/PlayingCards.php';
-require_once dirname(__FILE__) . '/AnimalCards.php';
 
 // 神経衰弱ゲームクラス
 class MemoryGame
 {
-  // 何らかのカードを表す
-  private $playingCards;
+  // カードを表す
+  private $cards;
 
   // コンストラクタ
-  public function __construct(string $cardType)
+  public function __construct(Cards $cards)
   {
-    if ($cardType === 'playingCards') {
-      $this->playingCards = new PlayingCards();
-    } elseif ($cardType === 'animalCards') {
-      $this->playingCards = new AnimalCards();
-    }
+    // カードの正体が何なのかは、神経衰弱ゲームクラスは知らなくてよい
+    $this->cards = $cards;
     // トランプをシャッフルしてランダムに並び替える
-    $this->playingCards->shuffle();
+    $this->cards->shuffle();
   }
 
   // ２枚のカードが同じであれば真。
   // 引数$position1~2はめくられたカードの位置を表す
   public function isHit(int $position1, int $position2): bool
   {
-    $position1Value = $this->playingCards->getValue($position1);
+    $position1Value = $this->cards->getValue($position1);
     echo $position1 . '枚目のカードは:' . $position1Value . PHP_EOL;
-    $position2Value = $this->playingCards->getValue($position2);
+    $position2Value = $this->cards->getValue($position2);
     echo $position2 . '枚目のカードは:' . $position2Value . PHP_EOL;
 
     return $position1Value === $position2Value;
