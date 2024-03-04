@@ -3,12 +3,10 @@
 declare(strict_types=1);
 require_once dirname(__FILE__) . '/Cards.php';
 
-// トランプクラス
-class PlayingCards implements Cards
+class AnimalCards implements cards
 {
   // カードの配列
   private $cards;
-
   // コンストラクタ
   public function __construct()
   {
@@ -20,9 +18,9 @@ class PlayingCards implements Cards
     echo 'シャッフルします...' . PHP_EOL;
   }
 
-  // 指定された位置のカードの数字を返す
+  // 指定された位置のカードの動物を返す
   public function getValue(int $position): string
   {
-    return '5'; //ここでは固定値を返す
+    return 'penguin'; //ここでは固定値を返す
   }
 }

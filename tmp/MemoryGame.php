@@ -2,17 +2,22 @@
 
 declare(strict_types=1);
 require_once dirname(__FILE__) . '/PlayingCards.php';
+require_once dirname(__FILE__) . '/AnimalCards.php';
 
 // 神経衰弱ゲームクラス
 class MemoryGame
 {
-  // １セット(52枚)のトランプを表す
+  // 何らかのカードを表す
   private $playingCards;
 
   // コンストラクタ
-  public function __construct()
+  public function __construct(string $cardType)
   {
-    $this->playingCards = new PlayingCards();
+    if ($cardType === 'playingCards') {
+      $this->playingCards = new PlayingCards();
+    } elseif ($cardType === 'animalCards') {
+      $this->playingCards = new AnimalCards();
+    }
     // トランプをシャッフルしてランダムに並び替える
     $this->playingCards->shuffle();
   }
