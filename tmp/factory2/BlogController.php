@@ -16,13 +16,9 @@ class BlogController
   private $modelFactory;
 
   // コンストラクタ
-  public function __construct(bool $isTesting = false)
+  public function __construct(AbstractDatabaseModelFactory $modelFactory)
   {
-    if ($isTesting) {
-      $this->modelFactory = new TestDatabaseModelFactory();
-    } else {
-      $this->modelFactory = new DatabaseModelFactory();
-    }
+    $this->modelFactory = $modelFactory;
   }
 
   // ブログ記事ページを表示する
@@ -41,5 +37,11 @@ class BlogController
 }
 
 // メインルーチン
-$controller = new BlogController(true);
+$isTesting = true;
+if ($isTesting) {
+  $modelFactory = new TestDatabaseModelFactory();
+} else {
+  $modelFactory = new DatabaseModelFactory();
+}
+$controller = new BlogController($modelFactory);
 $controller->show(1001, 2001);
