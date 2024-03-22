@@ -13,7 +13,8 @@ function createCompany($pdo, $company): void
     $statement->execute();
     $pdo->commit();
   } catch (PDOException $e) {
-    echo 'Debugging Error:' . $e->getMessage();
+    error_log('Error: fail to create company');
+    error_log('Debugging Error:' . $e->getMessage());
     $pdo->rollback();
   }
 }
@@ -33,3 +34,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // データベースにデータを登録する
   createCompany($pdo, $company);
 }
+
+header("Location: index.php");
