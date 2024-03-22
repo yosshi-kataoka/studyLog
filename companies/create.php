@@ -12,7 +12,7 @@ function createCompany($pdo, $company): void
     $statement->bindValue(':founder', $company['name'], PDO::PARAM_STR);
     $statement->execute();
     $pdo->commit();
-  } catch (Exception $e) {
+  } catch (PDOException $e) {
     echo 'Debugging Error:' . $e->getMessage();
     $pdo->rollback();
   }
