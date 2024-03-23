@@ -23,15 +23,15 @@
       <input type="text" id="author" name="author">
     </div>
     <div>
-      <input type="radio" name="review" id="unread" value="unread">
+      <input type="radio" name="status" id="unread" value="unread">
       <label for="unread">未読</label>
     </div>
     <div>
-      <input type="radio" name="review" id="reading" value="reading">
+      <input type="radio" name="status" id="reading" value="reading">
       <label for="reading">読んでいる</label>
     </div>
     <div>
-      <input type="radio" name="review" id="finish_reading" value="finish_reading">
+      <input type="radio" name="status" id="finish_reading" value="finish_reading">
       <label for="finish_reading">読了</label>
     </div>
     <div>
