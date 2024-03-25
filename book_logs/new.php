@@ -23,7 +23,7 @@
       <input type="text" id="author" name="author">
     </div>
     <div>
-      <input type="radio" name="status" id="unread" value="unread">
+      <input type="radio" name="status" id="unread" value="unread" checked>
       <label for="unread">未読</label>
     </div>
     <div>
