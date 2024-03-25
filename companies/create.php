@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf=8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>読書ログの登録</title>
+  <title>会社情報の登録</title>
 </head>
 
 <body>
