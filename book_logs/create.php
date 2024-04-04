@@ -74,4 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 // 入力値にエラーがある場合以下の処理
-include 'views/form.php';
+$title = "読書ログ登録";
+$content = __DIR__ . "/views/form.php";
+include 'views/layout.php';

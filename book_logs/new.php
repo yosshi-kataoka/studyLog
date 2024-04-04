@@ -7,4 +7,6 @@ $bookLog = [
   'review' => ""
 ];
 $errors = [];
-include 'views/form.php';
+$title = '読書ログ登録';
+$content = __DIR__ . "/views/form.php";
+include __DIR__ . '/views/layout.php';
