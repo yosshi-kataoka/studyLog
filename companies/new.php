@@ -6,4 +6,6 @@ $company = [
   'founder' => ''
 ];
 $errors = [];
-include 'views/form.php';
+$title = '会社情報の登録';
+$content = __DIR__ . '/views/form.php';
+include __DIR__ . '/views/layout.php';
