@@ -9,7 +9,7 @@ function createCompany($pdo, $company): void
     $statement = $pdo->prepare('INSERT INTO companies (name, establishment_date, founder) VALUES (:name, :establishment_date, :founder)');
     $statement->bindValue(':name', $company['name'], PDO::PARAM_STR);
     $statement->bindValue(':establishment_date', $company['establishment_date'], PDO::PARAM_STR);
-    $statement->bindValue(':founder', $company['name'], PDO::PARAM_STR);
+    $statement->bindValue(':founder', $company['founder'], PDO::PARAM_STR);
     $statement->execute();
     $pdo->commit();
   } catch (PDOException $e) {
@@ -65,5 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // もしエラーがあれば下記ページを表示
-
-include 'views/form.php';
+$title = '会社情報の登録';
+$content = __DIR__ . "/views/form.php";
+include 'views/layout.php';
