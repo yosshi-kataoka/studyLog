@@ -23,15 +23,15 @@
     <label>読書状況</label>
     <div>
       <div class="form-check form-check-inline">
-        <input type="radio" name="status" id="unread" value="unread" class="form-check-input" <?php echo ($bookLog['status'] === 'unread') ? 'checked' : "" ?>>
+        <input type="radio" name="status" id="unread" value="未読" class="form-check-input" <?php echo ($bookLog['status'] === '未読') ? 'checked' : "" ?>>
         <label class="form-check-label" for="unread">未読</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" name="status" id="reading" value="reading" class="form-check-input" <?php echo ($bookLog['status'] === 'reading') ? 'checked' : "" ?>>
+        <input type="radio" name="status" id="reading" value="読んでいる" class="form-check-input" <?php echo ($bookLog['status'] === '読んでいる') ? 'checked' : "" ?>>
         <label class="form-check-label" for="reading">読んでいる</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" name="status" id="finish_reading" value="finish_reading" class="form-check-input" <?php echo ($bookLog['status'] === 'finish_reading') ? 'checked' : "" ?>>
+        <input type="radio" name="status" id="finish_reading" value="読了" class="form-check-input" <?php echo ($bookLog['status'] === '読了') ? 'checked' : "" ?>>
         <label class="form-check-label" for="finish_reading">読了</label>
       </div>
     </div>
@@ -42,7 +42,7 @@
   </div>
   <div class="form-group mt-3">
     <label for="review">感想</label>
-    <textarea id="review" name="review" rows="10" class="form-control mt-2"><?php echo $bookLog['review']; ?></textarea>
+    <textarea id="review" name="review" rows="10" wrap="hard" class="form-control mt-2"><?php echo $bookLog['review']; ?></textarea>
   </div>
   <button type="submit" class="btn btn-primary mt-3">登録する</button>
 </form>

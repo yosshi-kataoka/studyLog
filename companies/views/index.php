@@ -4,7 +4,7 @@
   <main>
     <?php if (count($companies) > 0) : ?>
       <?php foreach ($companies as $company) : ?>
-        <section>
+        <section class="overflow-auto">
           <h2><?php echo escape($company['name']); ?></h2>
           <div>
             創業:<?php echo escape($company['establishment_date']); ?>年&nbsp;|&nbsp;代表:<?php echo escape($company['founder']); ?>
