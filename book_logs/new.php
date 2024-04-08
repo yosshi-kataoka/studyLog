@@ -2,7 +2,7 @@
 $bookLog = [
   'title' => "",
   'author' => "",
-  'status' => "unread",
+  'status' => "未読",
   'evaluation' => "",
   'review' => ""
 ];
