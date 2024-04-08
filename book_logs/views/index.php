@@ -2,12 +2,11 @@
 <main>
   <?php if (count($bookLogs) > 0) : ?>
     <?php foreach ($bookLogs as $bookLog) : ?>
-      <section class="border mt-3 border-black overflow-auto">
-        <div class="ms-2">
-          <h5 class="mt-2 mb-2 ms-2">書籍名:<?php echo escape($bookLog['title']); ?></h5>
-          <p class="mt-2 mb-2">著者名:<?php echo escape($bookLog['author']); ?>&nbsp;|読書状況:<?php echo escape($bookLog['status']); ?>&nbsp;|評価:<?php echo escape($bookLog['evaluation']); ?>点</p>
-          <p class="mt-2">感想<br><?php echo nl2br(escape($bookLog['review']), false); ?>
-          </p>
+      <section class="card shadow-sm mt-3 overflow-auto">
+        <div class="card-body">
+          <h5 class="card-title">書籍名:<?php echo escape($bookLog['title']); ?></h5>
+          <p>著者名:<?php echo escape($bookLog['author']); ?>&nbsp;|読書状況:<?php echo escape($bookLog['status']); ?>&nbsp;|評価:<?php echo escape($bookLog['evaluation']); ?>点</p>
+          <p>感想<br><?php echo nl2br(escape($bookLog['review']), false); ?></p>
         </div>
       </section>
     <?php endforeach; ?>
