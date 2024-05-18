@@ -55,7 +55,51 @@
   <main>
     <!--メインビジュアル-->
     <div class="py-4">
-
+      <div class="container">
+        <!-- カルーセル外枠 -->
+        <div id="main_visual" class="carousel slide" data-bs-ride="carousel">
+          <!-- インジケーター -->
+          <ol class="carousel-indicators">>
+            <li data-bs-target="#main_visual" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#main_visual" data-bs-slide-to="1"></li>
+            <li data-bs-target="#main_visual" data-bs-slide-to="2"></li>
+          </ol>
+          <!-- カルーセル内側 -->
+          <div class="carousel-inner">
+            <!-- スライド -->
+            <div class="carousel-item active">
+              <img class="img-fluid" src="/green_forest_site/img/slide_01.jpg" alt="観葉植物写真">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>GREEN FOREST GARDENINGのこだわり</h2>
+                <p>すべては潤いある空間のために。森に包まれるような樹木がメインのガーデニングショップです。</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="img-fluid" src="/green_forest_site/img/slide_02.jpg" alt="花々写真">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>GREEN FOREST GARDENINGの品揃え</h2>
+                <p>>選りすぐりの観葉植物、四季を彩る花木、実りの果樹をはじめ、ガーデニンググッズも充実しています。</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="img-fluid" src="/green_forest_site/img/slide_03.jpg" alt="スペース写真">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>GREEN FOREST GARDENINGの庭造り</h2>
+                <p>庭園をぶらつく、カフェでくつろぐ、スタッフと話し込む。庭づくりのイメージを膨らませてください。</p>
+              </div>
+            </div>
+          </div>
+          <!-- コントローラー -->
+          <a class="carousel-control-prev" href="#main_visual" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">前に戻る</span>
+          </a>
+          <a class="carousel-control-next" href="#main_visual" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">次に進む</span>
+          </a>
+        </div>
+      </div>
     </div>
     <!-- コンテンツ01 -->
     <div class="py-4">
