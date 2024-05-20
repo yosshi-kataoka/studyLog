@@ -148,7 +148,7 @@
                 <img src="/green_forest_site/img/about02-thumb.jpg" alt="" class="img-fluid">
                 <div class="card-body d-flex justify-content-between">
                   <h4 class="card-title">広大な敷地</h4>
-                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal01">詳しく見る</button>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@
                 <img src="/green_forest_site/img/about03-thumb.jpg" alt="" class="img-fluid">
                 <div class="card-body d-flex justify-content-between">
                   <h4 class="card-title">カフェコーナー</h4>
-                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal02">詳しく見る</button>
                 </div>
               </div>
             </div>
@@ -166,12 +166,72 @@
                 <img src="/green_forest_site/img/about04-thumb.jpg" alt="" class="img-fluid">
                 <div class="card-body d-flex justify-content-between">
                   <h4 class="card-title">スタッフ</h4>
-                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal03">詳しく見る</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- モーダル -->
+          <!-- Modal -->
+          <!-- モーダル１ -->
+          <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="modal01-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modal01-label">広大な敷地</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-center">
+                    <img src="/green_forest_site/img/about02.jpg" alt="敷地の写真" class="img-fluid">
+                  </p>
+                  <p>立地を活かした広大な店舗が自慢です。随所に植えられた木々たちをご覧になりながら、ご自分のお庭のイメージを膨らませてください。</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- モーダル２ -->
+          <div class="modal fade" id="modal02" tabindex="-1" role="dialog" aria-labelledby="modal02-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modal02-label">カフェコーナー</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-center">
+                    <img src="/green_forest_site/img/about03-thumb.jpg" alt="" class="img-fluid">
+                  </p>
+                  <p>自然を大に感じられる空間で味わうコーヒーは日々の喧騒を忘れさせてくれます。</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- モーダル3 -->
+          <div class="modal fade" id="modal03" tabindex="-1" role="dialog" aria-labelledby="modal03-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modal03-label">スタッフ</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-center">
+                    <img src="/green_forest_site/img/about04-thumb.jpg" alt="" class="img-fluid">
+                  </p>
+                  <p>経験豊富なスタッフが、お客様の庭造りを一からサポートを致します。</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </section>
