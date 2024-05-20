@@ -59,11 +59,11 @@
         <!-- カルーセル外枠 -->
         <div id="main_visual" class="carousel slide" data-bs-ride="carousel">
           <!-- インジケーター -->
-          <ol class="carousel-indicators">>
-            <li data-bs-target="#main_visual" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#main_visual" data-bs-slide-to="1"></li>
-            <li data-bs-target="#main_visual" data-bs-slide-to="2"></li>
-          </ol>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#main_visual" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#main_visual" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#main_visual" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
           <!-- カルーセル内側 -->
           <div class="carousel-inner">
             <!-- スライド -->
@@ -103,11 +103,30 @@
     </div>
     <!-- コンテンツ01 -->
     <div class="py-4">
-
+      <section id="news">
+        <div class="container">
+          <div class="row">
+            <!-- 左側カラム(画面幅md以上) -->
+            <div class="col-md-2">
+              <h3>ニュース</h3>
+            </div>
+            <!-- 右側カラム(画面幅md以上) -->
+            <div class="col-md-10">
+              <dl class="row">
+                <dt class="col-md-3">2021年0月0日</dt>
+                <dd class="col-md-9">ドリンクサービスクーポン配布中です</dd>
+                <dt class="col-md-3">2021年0月0日</dt>
+                <dd class="col-md-9">この季節だけの花木を追加しました</dd>
+                <dt class="col-md-3">2021年0月0日</dt>
+                <dd class="col-md-9">新しいプランター入荷しました</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- コンテンツ02 -->
     <div class="py-4">
-
     </div>
     <!-- コンテンツ03 -->
     <div class="py-4">
