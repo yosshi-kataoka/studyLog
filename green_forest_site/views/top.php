@@ -126,7 +126,55 @@
       </section>
     </div>
     <!-- コンテンツ02 -->
-    <div class="py-4">
+    <div class="py-4 bg-light">
+      <section id="about">
+        <div class="container">
+          <!-- 上段 -->
+          <div class="row mb-4">
+            <div class="col-md-8 mb-3">
+              <h3 class="mb-3">GREEN FOREST GARDENINGについて</h3>
+              <p>GREEN FOREST GARDENING(グリーンフォレストガーデニング)は、広大な森の真ん中にあるガーデニングショップです。コンセプトは、「ありのままに」。広大な敷地では、自然をそのまま持ってきたような樹木がおのおのの姿を誇ります。1本1本の芽生えから愛情込めて育て上げた樹木がお客様との出会いを楽しみにしております。ぜひGREEN FOREST GARDENINGにお越しください。</p>
+              <a href="#" class="btn btn-info">商品を見る</a>
+              <a href="#" class="btn btn-info">店舗情報を見る</a>
+            </div>
+            <div class="col-md-4">
+              <img src="/green_forest_site/img/about01.jpg" alt="一本一本を育むように" class="img-fluid">
+            </div>
+          </div>
+          <!-- 下段 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="/green_forest_site/img/about02-thumb.jpg" alt="" class="img-fluid">
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">広大な敷地</h4>
+                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="/green_forest_site/img/about03-thumb.jpg" alt="" class="img-fluid">
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">カフェコーナー</h4>
+                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <img src="/green_forest_site/img/about04-thumb.jpg" alt="" class="img-fluid">
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">スタッフ</h4>
+                  <button type="button" class="btn btn-secondary">詳しく見る</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- モーダル -->
+
+        </div>
+      </section>
     </div>
     <!-- コンテンツ03 -->
     <div class="py-4">
