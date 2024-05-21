@@ -238,8 +238,146 @@
     </div>
     <!-- コンテンツ03 -->
     <div class="py-4">
-
+      <section id="menu">
+        <div class="container">
+          <h3 class="mb-3">商品</h3>
+          <p>ガーデニングショップGREEN FOREST GARDENINGの定番商品です。掲載していない季節限定商品はGREEN FOREST GARDENINGの
+            <a href="#">ブログ</a>にて紹介しています。
+          </p>
+          <!-- タブ型ナビゲーション -->
+          <div class="nav nav-tabs" id="tab-menus" role="tablist">
+            <!-- タブ01 -->
+            <a class="nav-item nav-link active" id="tab-menu01" data-bs-toggle="tab" href="#panel-menu01" role="tab" aria-controls="panel-menu01" aria-selected="true">観葉植物</a>
+            <!-- タブ02 -->
+            <a class="nav-item nav-link" id="tab-menu02" data-bs-toggle="tab" href="#panel-menu02" role="tab" aria-controls="panel-menu02" aria-selected="false">花木</a>
+            <!-- タブ03 -->
+            <a class="nav-item nav-link" id="tab-menu03" data-bs-toggle="tab" href="#panel-menu03" role="tab" aria-controls="panel-menu03" aria-selected="false">果樹</a>
+            <!-- タブ04 -->
+            <a class="nav-item nav-link" id="tab-menu04" data-bs-toggle="tab" href="#panel-menu04" role="tab" aria-controls="panel-menu04" aria-selected="false">園芸用品</a>
+          </div>
+          <!-- <タブパネル> -->
+          <div class="tab-content" id="panel-menus">
+            <!-- パネル01 -->
+            <div class="tab-pane fade show active border border-top-0" id="panel-menu01" role="tabpanel" aria-labelledby="tab-menu01">
+              <div class="row p-3">
+                <div class="col-md-7 order-md-2">
+                  <h4>観葉植物</h4>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th>オーガスタ</th>
+                        <td>5,000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>パキラ</th>
+                        <td>10,000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>幸福の木</th>
+                        <td>12,000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>モンステラ</th>
+                        <td>11,000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>エバーフレッシュ</th>
+                        <td>20,000円(税別)~</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="/green_forest_site/img/house_plants.jpg" alt="観葉植物" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <!-- パネル02 -->
+            <div class="tab-pane fade border border-top-0" id="panel-menu02" role="tabpanel" aria-labelledby="tab-menu02">
+              <div class="row p-3">
+                <div class="col-md-7 order-md-2">
+                  <h4>花木</h4>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th>みかん</th>
+                        <td>1,500円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>オリーブ</th>
+                        <td>1,5000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>びわ</th>
+                        <td>3,000円(税別)~</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="img/flowering_trees.jpg" alt="花木" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <!-- パネル03 -->
+            <div class="tab-pane fade border border-top-0" id="panel-menu03" role="tabpanel" aria-labelledby="tab-menu03">
+              <div class="row p-3">
+                <div class="col-md-7 order-md-2">
+                  <h4>果樹</h4>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>もも</th>
+                        <td>4,500円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>ぶどう</th>
+                        <td>14,500円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>りんご</th>
+                        <td>23,000円(税別)~</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="/green_forest_site/img/fruit_trees.jpg" alt="果樹" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <!-- パネル04 -->
+            <div class="tab-pane fade border border-top-0" id="panel-menu04" role="tabpanel" aria-labelledby="tab-menu04">
+              <div class="row p-3">
+                <div class="col-md-7 order-md-2">
+                  <h4>園芸用品</h4>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>軍手</th>
+                        <td>200円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>散水機</th>
+                        <td>10,000円(税別)~</td>
+                      </tr>
+                      <tr>
+                        <th>ジョウロ</th>
+                        <td>1,200円(税別)~</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="/green_forest_site/img/gardening_tools.jpg" alt="園芸用品" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
     <!-- コンテンツ04 -->
     <div class="py-4">
 
