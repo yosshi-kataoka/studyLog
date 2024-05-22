@@ -398,9 +398,100 @@
     </div>
     <!-- コンテンツ05 -->
     <div class="py-4">
-
+      <section id="information">
+        <div class="container">
+          <h3 class="mb-3">インフォメーション</h3>
+          <p>ガーデニングショップGREEN FOREST GARDENINGは、~県の~市の山の中にあります。大自然に囲まれた広々としたお店で、お客様のガーデニングライフをサポートします。</p>
+          <div class="row">
+            <!-- 左側セクション -->
+            <div class="col-md-6">
+              <section id="shop">
+                <h4 class="mb-3">店舗情報</h4>
+                <!-- 店舗情報の表 -->
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>店名
+                      </th>
+                      <td>GREEN FOREST GARDENING</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>住所
+                      </th>
+                      <td>〒000-0000 ~県~市~町1-2-3</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>電話番号
+                      </th>
+                      <td>00-0000-0000</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>営業時間
+                      </th>
+                      <td>10:00~19:00</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calender d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>定休日
+                      </th>
+                      <td>水曜日、不定休</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>クレジットカード、電子マネー
+                      </th>
+                      <td>VISA/Master/JCB,PayPay</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>トラック貸し出し
+                      </th>
+                      <td>軽トラックの貸し出しOK(同時4台)</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck-flatbed  d-none d-sm-inline align-baseline me-1" viewBox="0 0 16 16">
+                          ...中略...
+                        </svg>駐車場
+                      </th>
+                      <td>駐車場あり(普通乗用車10台)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+            <!-- 右側セクション -->
+            <div class="col-md-6">
+              <section id="access">
+                <h4 class="mb-3">アクセス</h4>
+                <!-- アクセスマップ -->
+                <div class="ratio ratio-4x3 mb-2">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420853.6767390621!2d131.09727128814737!3d34.50492886095772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355b4786a989c04d%3A0x4efd6424635c8c41!2z6aCI5L2Q44Ob44Or44Oz44OV44Kn44Or44K5!5e0!3m2!1sja!2sjp!4v1716349432006!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>~道~ICから車で10分、~線~駅から徒歩30分(2km),駐車場あり</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-
   </main>
   <!-- フッター -->
   <footer>
