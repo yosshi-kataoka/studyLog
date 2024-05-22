@@ -379,8 +379,22 @@
     </div>
 
     <!-- コンテンツ04 -->
-    <div class="py-4">
-
+    <div class="py-4 bg-light">
+      <section id="coupon">
+        <div class="container">
+          <h3 class="text-center mb-3">クーポン</h3>
+          <div class="card text-center text-dark w-75 mx-auto">
+            <div class="card-header bg-success text-white">サービスクーポン</div>
+            <div class="card-body">
+              <h5 class="card-title">ドリンクをペアでご提供</h5>
+              <p class="card-text">期間中、5,000円(税別)以上のお買い物をされたお客様に、ドリンクをペアでサービスいたします。お会計の際に、このクーポン画面をスタッフにお見せください。</p>
+            </div>
+            <div class="card-footer bg-success text-white">
+              クーポンコード:HAPPY GARDEN
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- コンテンツ05 -->
     <div class="py-4">
