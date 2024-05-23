@@ -21,31 +21,32 @@
         <!-- 左側メニュー トップページの各コンテンツへのリンク -->
         <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link " aria-current="page" href="#">ホーム</a>
+            <a class="nav-link" href="#" aria-current="page" href="#">ホーム</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">お店について</a>
+            <a class="nav-link" href="#about">お店について</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">商品</a>
+            <a class="nav-link" href="#menu">商品</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">クーポン</a>
+            <a class="nav-link" href="#coupon">クーポン</a>
           </li>
+          <!-- ドロップダウン -->
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               インフォメーション
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">お店</a></li>
-              <li><a class="dropdown-item" href="#">アクセス</a></li>
+              <li><a class="dropdown-item" href="#shop">お店</a></li>
+              <li><a class="dropdown-item" href="#access">アクセス</a></li>
             </ul>
           </li>
         </ul>
         <!-- 右側メニュー お問い合わせページへのリンク -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link btn btn-info" href="contact.html">お問い合わせ</a>
+            <a href="contact.html" class="nav-link btn btn-info text-dark">お問い合わせ</a>
           </li>
         </ul>
       </div>
@@ -502,22 +503,22 @@
           <a class="nav-link" href="#">ホーム</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ニュース</a>
+          <a class="nav-link" href="#news">ニュース</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">お店について</a>
+          <a class="nav-link" href="#about">お店について</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">商品</a>
+          <a class="nav-link" href="#menu">商品</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">クーポン</a>
+          <a class="nav-link" href="#coupon">クーポン</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">インフォメーション</a>
+          <a class="nav-link" href="#shop">インフォメーション</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">お問い合わせ</a>
+          <a class="nav-link" href="#contact.php">お問い合わせ</a>
         </li>
       </ul>
       <p>
