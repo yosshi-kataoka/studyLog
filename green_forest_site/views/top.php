@@ -494,8 +494,36 @@
     </div>
   </main>
   <!-- フッター -->
-  <footer>
-
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <!-- ナビゲーション -->
+      <ul class="nav justify-content-center mb-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ニュース</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">お店について</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">商品</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">クーポン</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">インフォメーション</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">お問い合わせ</a>
+        </li>
+      </ul>
+      <p>
+        <small>Copyright &copy;2021 GREEN FOREST GARDENING, All Rights Reserved.</small>
+      </p>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>>
 </body>
