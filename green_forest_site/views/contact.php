@@ -24,7 +24,85 @@
       <h3 class="mb-3">お問い合わせフォーム</h3>
       <!-- フォーム -->
       <form>
-        (ここにフォームが入ります)
+        <!-- 名前 -->
+        <div class="row py-3">
+          <label for="name" class="col-md-3 col-form-label">
+            お名前<span class="badge bg-warning text-dark">必須</span>
+          </label>
+          <div class="col-md-9">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="name" placeholder="みどり はなこ" required>
+              <label for="name">お名前を入力してください。</label>
+            </div>
+          </div>
+        </div>
+        <!-- メールアドレス -->
+        <div class="row py-3">
+          <label for="e-mail" class="col-md-3 col-form-label">
+            メールアドレス<span class="badge bg-warning text-dark">必須</span>
+          </label>
+          <div class="col-md-9">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="e-mail" placeholder="mail@example.com" required>
+              <label for="e-mail">有効な電子メールアドレスを入力してください。</label>
+            </div>
+          </div>
+        </div>
+        <!-- きっかけ -->
+        <fieldset class="py-3">
+          <div class="row">
+            <legend class="col-md-3 col-form-label">
+              当店を知ったきっかけ
+            </legend>
+            <div class="col-md-9">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio1" value="answer1" checked>
+                <label class="form-check-label" for="radio1">口コミ</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio2" value="answer2">
+                <label class="form-check-label" for="radio2">検索エンジン</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio3" value="answer3">
+                <label class="form-check-label" for="radio3">広告</label>
+              </div>
+            </div>
+        </fieldset>
+        <!-- 種類 -->
+        <div class="row py-3">
+          <label for="category" class="col-md-3 col-form-label">
+            お問い合わせ種類<span class="badge bg-warning text-dark">必須</span>
+          </label>
+          <div class="col-md-9">
+            <div class="form-floating">
+              <select class="form-select" id="category" name="category">
+                <option value="category1">ご予約について</option>
+                <option value="category2">委託販売について</option>
+                <option value="category1">その他のお問い合わせ</option>
+              </select>
+              <label for="category">お選びください。</label>
+            </div>
+          </div>
+        </div>
+        <!-- 内容 -->
+        <div class="row py-3">
+          <label for="message" class="col-md-3 col-form-label">
+            お問い合わせ内容<span class="badge bg-warning text-dark">必須</span>
+          </label>
+          <div class="col-md-9">
+            <div class="form-floating">
+              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" required></textarea>
+              <label for="message">ご自由にお書きください。</label>
+            </div>
+          </div>
+        </div>
+        <!-- 確認ボタン -->
+        <div class="row justify-content-end py-3">
+          <div class="col-md-9">
+            <button type="submit" class="btn btn-primary">確認する</button>
+          </div>
+        </div>
       </form>
 
 
