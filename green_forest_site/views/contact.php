@@ -22,8 +22,16 @@
   <div class="py-3">
     <div class="container">
       <h3 class="mb-3">お問い合わせフォーム</h3>
+      <!-- 入力した項目にエラーがある場合はエラー内容を表示させる -->
+      <?php if (count($errors)) : ?>
+        <ul class="text-danger">
+          <?php foreach ($errors as $error) : ?>
+            <li><?php echo $error; ?></li>
+          <?php endforeach ?>
+        </ul>
+      <?php endif; ?>
       <!-- フォーム -->
-      <form>
+      <form action="create.php" method="POST">
         <!-- 名前 -->
         <div class="row py-3">
           <label for="name" class="col-md-3 col-form-label">
@@ -31,7 +39,7 @@
           </label>
           <div class="col-md-9">
             <div class="form-floating">
-              <input type="text" class="form-control" id="name" placeholder="みどり はなこ" required>
+              <input type="text" class="form-control" id="name" name="name" placeholder="みどり はなこ" value="<?php echo $form['name']; ?>" required>
               <label for="name">お名前を入力してください。</label>
             </div>
           </div>
@@ -43,7 +51,7 @@
           </label>
           <div class="col-md-9">
             <div class="form-floating">
-              <input type="text" class="form-control" id="e-mail" placeholder="mail@example.com" required>
+              <input type="text" class="form-control" id="e-mail" name="mail" placeholder="mail@example.com" value="<?php echo $form['mail']; ?>" required>
               <label for="e-mail">有効な電子メールアドレスを入力してください。</label>
             </div>
           </div>
@@ -79,7 +87,7 @@
               <select class="form-select" id="category" name="category">
                 <option value="category1">ご予約について</option>
                 <option value="category2">委託販売について</option>
-                <option value="category1">その他のお問い合わせ</option>
+                <option value="category3">その他のお問い合わせ</option>
               </select>
               <label for="category">お選びください。</label>
             </div>
@@ -92,8 +100,8 @@
           </label>
           <div class="col-md-9">
             <div class="form-floating">
-              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" required></textarea>
-              <label for="message">ご自由にお書きください。</label>
+              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" value="<?php echo $form['message']; ?>" required></textarea>
+              <label for=" message">ご自由にお書きください。</label>
             </div>
           </div>
         </div>
