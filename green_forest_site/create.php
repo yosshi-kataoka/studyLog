@@ -32,6 +32,9 @@ function validate($form): array
 }
 
 // メインルーチン
+// create.php
+session_start();
+$_SESSION['form'] = $_POST;
 
 // contact.phpのPOSTデータを$formに格納させる
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -47,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $errors = validate($form);
   // エラーがなかったら、confirmation.phpへリダイレクト
   if (!count($errors)) {
-    header("Location: confirmation.php");
+    header("Location: confirm.php");
   }
 }
 
