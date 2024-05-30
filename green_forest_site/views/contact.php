@@ -31,7 +31,7 @@
         </ul>
       <?php endif; ?>
       <!-- フォーム -->
-      <form action="create.php" method="POST">
+      <form action="validate.php" method="POST">
         <!-- 名前 -->
         <div class="row py-3">
           <label for="name" class="col-md-3 col-form-label">
@@ -100,7 +100,7 @@
           </label>
           <div class="col-md-9">
             <div class="form-floating">
-              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" required><?php echo $form['message']; ?>"</textarea>
+              <textarea class="form-control" id="message" rows="8" name="message" placeholder="お問い合わせ内容" required><?php echo $form['message']; ?></textarea>
               <label for="message">ご自由にお書きください。</label>
             </div>
           </div>
