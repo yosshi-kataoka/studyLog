@@ -12,7 +12,7 @@
   <!--ヘッダ-->
   <header class="py-4">
     <div class="container text-center" id="home">
-      <h1><a href="index.php"><img class="mw-100" src="img/logo.png" alt='ロゴ画像'></a></h1>
+      <h1><a href="top.php"><img class="mw-100" src="img/logo.png" alt='ロゴ画像'></a></h1>
     </div>
   </header>
   <!-- ナビゲーションバー -->
@@ -20,7 +20,7 @@
     <!-- サブココンポーネント -->
     <div class="container">
       <!-- ブランド -->
-      <a class="navbar-brand" href="index.php">GREEN FOREST GARDENING</a>
+      <a class="navbar-brand" href="top.php">GREEN FOREST GARDENING</a>
       <!-- 切り替えボタン -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

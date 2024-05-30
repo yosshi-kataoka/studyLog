@@ -27,7 +27,7 @@
         <ul class="text-danger">
           <?php foreach ($errors as $error) : ?>
             <li><?php echo $error; ?></li>
-          <?php endforeach ?>
+          <?php endforeach; ?>
         </ul>
       <?php endif; ?>
       <!-- フォーム -->
@@ -64,15 +64,15 @@
             </legend>
             <div class="col-md-9">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="questionnaire" id="radio1" value="answer1" checked>
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio1" value="口コミ" <?php echo ($form['questionnaire'] === '口コミ') ? 'checked' : '' ?>>
                 <label class="form-check-label" for="radio1">口コミ</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="questionnaire" id="radio2" value="answer2">
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio2" value="検索エンジン" <?php echo ($form['questionnaire'] === '検索エンジン') ? 'checked' : '' ?>>
                 <label class="form-check-label" for="radio2">検索エンジン</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="questionnaire" id="radio3" value="answer3">
+                <input class="form-check-input" type="radio" name="questionnaire" id="radio3" value="広告" <?php echo ($form['questionnaire'] === '広告') ? 'checked' : '' ?>>
                 <label class="form-check-label" for="radio3">広告</label>
               </div>
             </div>
@@ -85,9 +85,9 @@
           <div class="col-md-9">
             <div class="form-floating">
               <select class="form-select" id="category" name="category">
-                <option value="category1">ご予約について</option>
-                <option value="category2">委託販売について</option>
-                <option value="category3">その他のお問い合わせ</option>
+                <option value="ご予約について" <?php echo ($form['category'] === 'ご予約について') ? 'selected' : '' ?>>ご予約について</option>
+                <option value="委託販売について" <?php echo ($form['category'] === '委託販売について') ? 'selected' : '' ?>>委託販売について</option>
+                <option value="その他のお問い合わせ" <?php echo ($form['category'] === 'その他のお問い合わせ') ? 'selected' : '' ?>>その他のお問い合わせ</option>
               </select>
               <label for="category">お選びください。</label>
             </div>
@@ -100,8 +100,8 @@
           </label>
           <div class="col-md-9">
             <div class="form-floating">
-              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" value="<?php echo $form['message']; ?>" required></textarea>
-              <label for=" message">ご自由にお書きください。</label>
+              <textarea class="form-control" id="message" rows="8" name="message" placeholder="問い合わせ内容" required><?php echo $form['message']; ?>"</textarea>
+              <label for="message">ご自由にお書きください。</label>
             </div>
           </div>
         </div>
